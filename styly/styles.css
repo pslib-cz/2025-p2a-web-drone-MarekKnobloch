@@ -1,10 +1,10 @@
-@layer reset, init, desing;
+@layer reset, init, design;
  
 @import url(./normalize.css) layer(reset);
  
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap') layer(init);
  
-@layer desing {
+@layer design {
     :root {
         color-scheme: light dark;
         --header-bg-color: light-dark(#3B3E40, #3B3E40);
@@ -13,6 +13,7 @@
         --secondary-color: light-dark(#FFF, #fff);
         --text-color: light-dark(#000, #fff);
         --bg-color: light-dark(#fff, #000)
+        --section-bg-color: light-dark(#3B3E40, #3B3E40);
     }
  
     h1 {
@@ -23,8 +24,7 @@
     .img-fluid {
         display: block;
         height: auto;
-        width: auto;
- 
+        max-width: 100%;
     }
  
     html {
@@ -51,6 +51,10 @@
         color: var(--header-text-color);
         line-height: 1.5;
         padding: 1em;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 1em;
+        
     }
  
     .header__nav {
@@ -63,20 +67,23 @@
     }
     .header__intro{
         margin-top: 10vh;
+        max-width: 600px;
     }
     .button {
-        display: inline-block;
-        border-radius: 0.5rem;
-        padding: 0.75em 2em;
-        text-decoration: none;
-        cursor: pointer;
-        text-align: center;
-       
+       display: inline-block;
+  padding: 0.75em 2em;
+  border-radius: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  background-color: #ffffff !important;
+  color: black !important ;          
+  text-decoration: none;
+  font-size: 1rem;
+
     }
     .button--light{
-        background-color: var(--text-color);
-        color: var(--bg-color);
-         background-color: var(--bg-color);
+        background-color: black; 
+  color: #ffffff; 
     }
     .img-block {
         margin: 0;
@@ -87,12 +94,97 @@
     }
     .li-styl {
         margin-bottom: 12px;
+        font-size: 1.25rem;
+        font-weight: 600;
+        
     }
     .li-styl::marker {
     font-size: 1,5em;
         color: #66D4D4;
     }
 
+    .figcaption {
+        text-align: center;
+        font-size: 0.875rem;
+        color: gray;
+        margin-top: 0.5em;
+    }
+    .infoblok {
+        outline: 5px solid var(--primary-color);
+        padding: 1em;
+        margin-bottom: 2em;
+        margin-top: 1em;
+    }
+    .card-img {
+        max-width: 372px;
+        max-height: 207px;
+    }
+   .button--card {
+        display: inline-block;
+        padding: 0.5em 1em;
+        border-radius: 0.5rem;
+        text-align: center;
+        background-color: var(--primary-color) !important;
+        color: var(--secondary-color) !important;
+        text-decoration: none;
+   }
+    .card {
+     padding: 1em;
+     margin-bottom: 2em;
+     max-width: 372px;
+     max-height: 414px;
    
+    }
+   p {
+    line-height: 1.5;   
+    margin-bottom: 1em;
+   }
+   .card-text {
+   font-size: 0.875rem;
+   font-weight: 500;
+   }
+   .card h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+   }
+   .block {
+    background-color: var(--bg-color);
+    background-size: cover;
+    background-position: unset;
+    padding: 1em;
+    margin-top: 1em;
+    max-width: 100%;
+   }
+   h6 {
+    font-size: 3.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    color: #fff;
+    text-align: center;
+   }
+   .nakup {
+    padding: 2em;
+   }
+    .nakup .cards {
+     display: flex;
+        flex-wrap: wrap;
+        gap: 3em;
+    }
+    .nakup .card {
+        flex: 1 1 45%;
+        box-sizing: border-box;
+    }
+    .nakup .footer {
+        width: 100%;
+        text-align: center;
+        font-size: 0.875rem;
+        margin-top: 2em;
+        color: #fff;
+        margin-bottom: 1em;
+        background-color: #3B3E40
+        
+    }
 }
  
