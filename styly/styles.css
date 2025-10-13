@@ -10,7 +10,7 @@
         --header-bg-color: light-dark(#3B3E40, #3B3E40);
         --header-text-color: light-dark(#fff, #fff);
         --primary-color: light-dark(#66D4D4, #3e8a8a);
-        --secondary-color: (#FFF, #fff);
+        --secondary-color: light-dark(#FFF, #fff);
         --text-color: light-dark(#000, #fff);
         --bg-color: light-dark(#fff, #000)
     }
@@ -65,14 +65,18 @@
         margin-top: 10vh;
     }
     .button {
-        display: block;
+        display: inline-block;
         border-radius: 0.5rem;
         padding: 0.75em 2em;
         text-decoration: none;
+        cursor: pointer;
+        text-align: center;
+       
     }
     .button--light{
         background-color: var(--text-color);
-        color: var(--text-color);
+        color: var(--bg-color);
+         background-color: var(--bg-color);
     }
     .img-block {
         margin: 0;
@@ -81,6 +85,14 @@
         text-align: center;
         margin-top: 0.5em;
     }
+    .li-styl {
+        margin-bottom: 12px;
+    }
+    .li-styl::marker {
+    font-size: 1,5em;
+        color: #66D4D4;
+    }
+
    
 }
  
