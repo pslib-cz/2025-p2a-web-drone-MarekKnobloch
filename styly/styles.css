@@ -3,36 +3,30 @@
 @import url(./normalize.css) layer(reset);
  
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap') layer(init);
- 
+
 @layer design {
     :root {
         color-scheme: light dark;
         --header-bg-color: light-dark(#3B3E40, #3B3E40);
         --header-text-color: light-dark(#fff, #fff);
         --primary-color: light-dark(#66D4D4, #3e8a8a);
-        --secondary-color: light-dark(#FFF, #fff);
+        --secondary-color: light-dark(#000000, #000000);
         --text-color: light-dark(#000, #fff);
         --bg-color: light-dark(#fff, #000)
         --section-bg-color: light-dark(#3B3E40, #3B3E40);
+        --btn-color: light-dark(#fff, #fff)
     }
- 
-    h1 {
-        font-size: 4rem;
-        font-weight: extra-bold;
-    }
-   
-    .img--fluid {
-        display: block;
-        height: auto;
-        max-width: 100%;
-    }
- 
     html {
         font-family: "Open Sans", sans-serif;
         font-size: 100%;
         color: var(--text-color);
     }
- 
+    h1 {
+        font-size: 4rem;
+        font-weight: extra-bold;
+    }
+     
+    
     body {
         background-color: var(--bg-color);
     }
@@ -42,7 +36,12 @@
         max-width: 960px;
         margin: 0 auto;
     }
- 
+    
+  .img--fluid {
+        display: block;
+        height: auto;
+        max-width: 100%;
+    }
     .header {
         background-image: url("../images/header-2560w.webp");
         background-size: cover;
@@ -69,21 +68,43 @@
         margin-top: 10vh;
         max-width: 600px;
     }
+    .figure-obal {
+        margin: 0 auto;
+    }
+    .figcaption {
+        color: var(--text-color);
+        text-align: center;
+        font-size: smaller;
+        padding: 1em;
+        
+    }
+
     .button {
        display: inline-block;
   padding: 0.75em 2em;
   border-radius: 0.5rem;
   text-align: center;
   cursor: pointer;
-  background-color: #ffffff !important;
-  color: black !important ;          
+  background-color: var(--btn-color) ;
+  color: var(--text-color)  ;          
   text-decoration: none;
   font-size: 1rem;
-
+     font-family: 'Open Sans', sans-serif;
     }
     .button--light{
-        background-color: black; 
-  color: #ffffff; 
+        background-color: var(--btn-color); 
+        color: var(--secondary-color); 
+    }
+    .button--card {
+        display: inline-block;
+        background-color: var(--primary-color);
+        padding: 0.75em 2em;
+        border-radius: 1em;
+        text-decoration: none;
+        color: var(--header-text-color);
+        font-size: 1rem;
+        text-align: center;
+         font-family: 'Open Sans', sans-serif;
     }
     .img--block {
         margin: 0;
@@ -102,52 +123,30 @@
     font-size: 1,5em;
         color: #66D4D4;
     }
-
-    .figcaption {
-        text-align: center;
-        font-size: 0.875rem;
-        color: gray;
-        margin-top: 0.5em;
+   
+    .card {
+      display: inline-block;
+        margin-bottom: 2rem;
+        gap: 1rem;
+        max-width: 20rem;
+        padding: 1em;
+        vertical-align: top;
+        height: 394px;
+    }
+    .card_header--h1 {
+        font-size: larger;
+        font-weight: 700;
     }
     .infoblok {
-        outline: 5px solid var(--primary-color);
+        outline: solid 5px var(--primary-color);
         padding: 1em;
-        margin-bottom: 2em;
+        margin-bottom: 1em;
         margin-top: 1em;
     }
-    .card-img {
-        max-width: 372px;
-        max-height: 207px;
-    }
-   .button--card {
-        display: inline-block;
-        padding: 0.5em 1em;
-        border-radius: 0.5rem;
-        text-align: center;
-        background-color: var(--primary-color);
-        color: var(--secondary-color) ;
-        text-decoration: none;
-   }
-    .card {
-     padding: 1em;
-     margin-bottom: 2em;
-     max-width: 372px;
-     max-height: 414px;
-   
-    }
+    
    p {
     line-height: 1.5;   
     margin-bottom: 1em;
-   }
-   .card-text {
-   font-size: 0.875rem;
-   font-weight: 500;
-   }
-   .card .card_header__h1 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
    }
    .block {
     background-color: var(--bg-color);
@@ -157,13 +156,7 @@
     margin-top: 1em;
     max-width: 100%;
    }
-   h6 {
-    font-size: 3.25rem;
-    font-weight: 700;
-    margin-bottom: 0.5em;
-    color: #fff;
-    text-align: center;
-   }
+   
    .nakup {
     padding: 2em;
    }
@@ -176,10 +169,7 @@
         flex: 1 1 45%;
         box-sizing: border-box;
     }
-
-
     .infoblok--footer {
-        
         text-align: center;
         font-size: 0.875rem;
         margin-top: 2em;
@@ -189,11 +179,41 @@
         padding-bottom: 20px;   
             
     }
-    .card-text__2x {
-        font-size: 2em;
-    }
     .infoblok--footer__header {
         font-size: 3em;
     }
+    .card--text__2x {
+        font-size: 2em;
+    }
+    .obrazek1 {
+        width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-width: 0;
+    }
+    .obrazek1 img {
+ width: 100%;
+  height: auto;
+  display: block;
+    }
+    .obrazek23 {
+          margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+    }
+     .obrazek23 img {
+        width: 100%;
+  height: auto;
+  display: block;
+     }
+     .footer2 {
+        margin-top: 2em;
+        background-color: var(--header-bg-color);
+        text-align: center;
+        height: 122px;
+        line-height: 122px;
+        color: var(--header-text-color);
+     }
 }
  
