@@ -1,7 +1,7 @@
 @layer reset, init, design;
- 
+
 @import url(./normalize.css) layer(reset);
- 
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap') layer(init);
 
 @layer design {
@@ -12,36 +12,38 @@
         --primary-color: light-dark(#66D4D4, #3e8a8a);
         --secondary-color: light-dark(#000000, #000000);
         --text-color: light-dark(#000, #fff);
-        --bg-color: light-dark(#fff, #000)
-        --section-bg-color: light-dark(#3B3E40, #3B3E40);
+        --bg-color: light-dark(#fff, #000) --section-bg-color: light-dark(#3B3E40, #3B3E40);
         --btn-color: light-dark(#fff, #fff)
     }
+
     html {
         font-family: "Open Sans", sans-serif;
         font-size: 100%;
         color: var(--text-color);
     }
+
     h1 {
         font-size: 4rem;
         font-weight: extra-bold;
     }
-     
-    
+
+
     body {
         background-color: var(--bg-color);
     }
-   
+
     main {
         padding: 1rem;
         max-width: 960px;
         margin: 0 auto;
     }
-    
-  .img--fluid {
+
+    .img--fluid {
         display: block;
         height: auto;
         max-width: 100%;
     }
+
     .header {
         background-image: url("../images/header-2560w.webp");
         background-size: cover;
@@ -53,48 +55,53 @@
         padding-left: 5%;
         padding-right: 5%;
         padding-bottom: 1em;
-        
+
     }
- 
+
     .header__nav {
         text-align: center;
     }
- 
+
     .header__link {
         text-align: center;
         padding-top: 1em;
     }
-    .header__intro{
+
+    .header__intro {
         margin-top: 10vh;
         max-width: 600px;
     }
+
     .figure-obal {
         margin: 0 auto;
     }
+
     .figcaption {
         color: var(--text-color);
         text-align: center;
         font-size: smaller;
         padding: 1em;
-        
+
     }
 
     .button {
-       display: inline-block;
-  padding: 0.75em 2em;
-  border-radius: 0.5rem;
-  text-align: center;
-  cursor: pointer;
-  background-color: var(--btn-color) ;
-  color: var(--text-color)  ;          
-  text-decoration: none;
-  font-size: 1rem;
-     font-family: 'Open Sans', sans-serif;
+        display: inline-block;
+        padding: 0.75em 2em;
+        border-radius: 0.5rem;
+        text-align: center;
+        cursor: pointer;
+        background-color: var(--btn-color);
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: 'Open Sans', sans-serif;
     }
-    .button--light{
-        background-color: var(--btn-color); 
-        color: var(--secondary-color); 
+
+    .button--light {
+        background-color: var(--btn-color);
+        color: var(--secondary-color);
     }
+
     .button--card {
         display: inline-block;
         background-color: var(--primary-color);
@@ -104,28 +111,32 @@
         color: var(--header-text-color);
         font-size: 1rem;
         text-align: center;
-         font-family: 'Open Sans', sans-serif;
+        font-family: 'Open Sans', sans-serif;
     }
+
     .img--block {
         margin: 0;
     }
+
     .img-block__caption {
         text-align: center;
         margin-top: 0.5em;
     }
+
     .li-styl {
         margin-bottom: 12px;
         font-size: 1.25rem;
         font-weight: 600;
-        
+
     }
+
     .li-styl::marker {
-    font-size: 1,5em;
+        font-size: 1, 5em;
         color: #66D4D4;
     }
-   
+
     .card {
-      display: inline-block;
+        display: inline-block;
         margin-bottom: 2rem;
         gap: 1rem;
         max-width: 20rem;
@@ -133,42 +144,48 @@
         vertical-align: top;
         height: 394px;
     }
+
     .card_header--h1 {
         font-size: larger;
         font-weight: 700;
     }
+
     .infoblok {
         outline: solid 5px var(--primary-color);
         padding: 1em;
         margin-bottom: 1em;
         margin-top: 1em;
     }
-    
-   p {
-    line-height: 1.5;   
-    margin-bottom: 1em;
-   }
-   .block {
-    background-color: var(--bg-color);
-    background-size: cover;
-    background-position: unset;
-    padding: 1em;
-    margin-top: 1em;
-    max-width: 100%;
-   }
-   
-   .nakup {
-    padding: 2em;
-   }
+
+    p {
+        line-height: 1.5;
+        margin-bottom: 1em;
+    }
+
+    .block {
+        background-color: var(--bg-color);
+        background-size: cover;
+        background-position: unset;
+        padding: 1em;
+        margin-top: 1em;
+        max-width: 100%;
+    }
+
+    .nakup {
+        padding: 2em;
+    }
+
     .nakup .cards {
-     display: flex;
+        display: flex;
         flex-wrap: wrap;
         gap: 3em;
     }
+
     .nakup .card {
         flex: 1 1 45%;
         box-sizing: border-box;
     }
+
     .infoblok--footer {
         text-align: center;
         font-size: 0.875rem;
@@ -176,44 +193,50 @@
         color: #fff;
         margin-bottom: 1em;
         background-color: #3B3E40;
-        padding-bottom: 20px;   
-            
+        padding: 48px;
+        max-width: 100%;
     }
+
     .infoblok--footer__header {
         font-size: 3em;
     }
+
     .card--text__2x {
         font-size: 2em;
     }
+
     .obrazek1 {
         width: 100%;
-    max-width: 100%;
-    height: auto;
-    min-width: 0;
+        max-width: 100%;
+        height: auto;
+        min-width: 0;
     }
+
     .obrazek1 img {
- width: 100%;
-  height: auto;
-  display: block;
-    }
-    .obrazek23 {
-          margin-top: 1rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
-    }
-     .obrazek23 img {
         width: 100%;
-  height: auto;
-  display: block;
-     }
-     .footer2 {
+        height: auto;
+        display: block;
+    }
+
+    .obrazek23 {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+    }
+
+    .obrazek23 img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .footer2 {
         margin-top: 2em;
         background-color: var(--header-bg-color);
         text-align: center;
         height: 122px;
         line-height: 122px;
         color: var(--header-text-color);
-     }
+    }
 }
- 
